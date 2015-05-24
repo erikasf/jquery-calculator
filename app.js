@@ -36,8 +36,7 @@ decimalAdded = false;
 //if eval key is pressed , calcualte and display the result
 // Basic functionality of the calculator is complete. But there are some problems like
 // 1. No two operators should be added consecutively.
-// 2. The equation shouldn't start from an operator except minus
-// 3. not more than 1 decimal should be there in a number
+//2.double operators pop up on the screen
 else if(operators.indexOf(btnVal) > -1) {
 // Operator is clicked
 // Get the last character from the equation
@@ -55,7 +54,7 @@ input.innerHTML = inputVal.replace(/.$/, btnVal);
 }
 decimalAdded =false;
 }
-// Now only the decimal problem is left. We can solve it easily using a flag 'decimalAdded' which we'll set once the decimal is added and prevent more decimals to be added once it's set. It will be reset when an operator, eval or clear key is pressed.
+// decimal added flag  clear key is pressed.
 else if(btnVal == '.') {
 if(!decimalAdded) {
 input.innerHTML += btnVal;
